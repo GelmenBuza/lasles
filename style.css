@@ -1,3 +1,67 @@
+@font-face {
+  font-family: RubikBold;
+  src: url(./assets/fonts/Rubik-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: RubikReg;
+  src: url(./assets/fonts/Rubik-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: RubikMed;
+  src: url(./assets/fonts/Rubik-Medium.ttf);
+  font-weight: 500;
+}
+.main-bg {
+  background-color: #FFFFFF;
+}
+.main-bg section {
+  margin: 50px 150px;
+}
 
-
-/*# sourceMappingURL=style.css.map */
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation span {
+  display: flex;
+  align-items: center;
+  font-family: Rubikmed, sans-serif;
+  font-size: 20px;
+  color: #0B132A;
+  text-align: center;
+}
+.navigation span img {
+  width: 35px;
+  height: 36.23px;
+  margin-right: 10px;
+}
+.navigation a {
+  text-decoration: none;
+  color: #4F5665;
+  font-family: RubikReg, sans-serif;
+  font-size: 16px;
+}
+.navigation div {
+  display: flex;
+  flex-direction: row;
+  font-family: RubickMed, sans-serif;
+  font-size: 16px;
+  color: #0B132A;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.navigation div .active {
+  border-radius: 50px;
+  border: 1px solid #F53855;
+  color: #F53855;
+  width: 150px;
+  height: 45px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
