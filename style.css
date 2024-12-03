@@ -33,8 +33,9 @@
   font-size: 20px;
   color: #0B132A;
   text-align: center;
+  margin-right: 158px;
 }
-.navigation span img {
+.navigation span .logo {
   width: 35px;
   height: 36.23px;
   margin-right: 10px;
@@ -51,15 +52,17 @@
   font-family: RubickMed, sans-serif;
   font-size: 16px;
   color: #0B132A;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  margin-left: 150px;
+}
+.navigation div p {
+  padding: 0 15px;
 }
 .navigation div .active {
   border-radius: 50px;
   border: 1px solid #F53855;
   color: #F53855;
-  width: 150px;
+  width: 120px;
   height: 45px;
   display: inline-flex;
   justify-content: center;
