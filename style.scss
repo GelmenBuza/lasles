@@ -15,11 +15,12 @@
     font-weight: 500;
 }
 
+body {
+    width: 1440px;
+}
+
 .main-bg {
     background-color: #FFFFFF;
-    section {
-        margin: 50px 150px;
-    }
 }
 
 .navigation {
@@ -27,10 +28,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 50px 150px;
     span {
         display: flex;
         align-items: center;
-        font-family: Rubikmed, sans-serif;
+        font-family: RubikMed, sans-serif;
         font-size: 20px;
         color: #0B132A;
         text-align: center;
@@ -51,7 +53,7 @@
     div {
         display: flex;
         flex-direction: row;
-        font-family: RubickMed, sans-serif;
+        font-family: RubikMed, sans-serif;
         font-size: 16px;
         color: #0B132A;
         align-items: center;
@@ -74,10 +76,74 @@
 
 .information {
     display: grid;
+    margin-top: 88px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 95.61px 95.61px 95.61px 95.61px;
+    margin-right: 83px;
+    margin-left: 150px;
+
     img {
         grid-column: 2;
-        grid-row: span(1);
+        grid-row: 1/4;
+        width: 611.24px;
+        height: 382.44px;
+    }
+    
+    h1 {
+        font-family: RubikMed, sans-serif;
+        font-weight: 400;
+        font-size: 50px;
+        color: #0B132A;
+        grid-row: 1/2;
+        grid-column: 1;
+        line-height: 70px;
+
+        span {
+            font-family: RubikBold, sans-serif;
+        }
+    }
+
+    p {
+        font-family: RubikMed, sans-serif;
+        font-size: 16px;
+        color: #4F5665;
+        grid-row: 3;
+        grid-column: 1;
+        line-height: 30px;
+        span {
+            font-family: RubikBold, sans-serif;
+        }
+    }
+
+    button {
+        width: 250px;
+        height: 60px;
+        background-color: #F53838;
+        grid-column: 1;
+        grid-row: 4;
+        border-radius: 10px;
+        box-shadow: 0 44px 40px -5px #f5383859;
+        border: none;
+    }
+}
+
+.stats {
+    margin: 0 150px;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    .user {
+        border-right: 1px solid #EEEFF2;
+    }
+
+    .location {
+        border-right: 1px solid #EEEFF2;
+        border-left: 1px solid #EEEFF2;
+    }
+
+    .server{
+        border-left: 1px solid #EEEFF2;
     }
 }
