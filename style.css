@@ -67,4 +67,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 95.61px 95.61px 95.61px 95.61px;
+}
+.information img {
+  grid-column: 2;
+  grid-row: span(1);
 }/*# sourceMappingURL=style.css.map */
