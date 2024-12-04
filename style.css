@@ -497,12 +497,8 @@ body {
   color: #0B132A;
 }
 
-main {
-  position: absolute;
-}
-
 .subscribe {
-  position: relative;
+  position: absolute;
   left: 50%;
   right: 50%;
   display: flex;
@@ -525,4 +521,17 @@ main {
   font-family: RubikReg;
   font-size: 16px;
   color: #4F5665;
+}
+
+footer {
+  background-color: #F8F8F8;
+}
+
+.left-side .logoText {
+  font-family: RubikMed;
+  font-size: 20px;
+}
+.left-side .logoText img {
+  width: 35px;
+  height: 36.23px;
 }/*# sourceMappingURL=style.css.map */
