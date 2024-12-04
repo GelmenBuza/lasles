@@ -23,9 +23,6 @@
 
 body {
     width: 1440px;
-}
-
-.main-bg {
     background-color: #FFFFFF;
 }
 
@@ -243,6 +240,55 @@ body {
             font-size: 20px;
             line-height: 30px;
             color: #4F5665;
+        }
+    }
+}
+
+.second-section {
+    margin: 0 150px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 100%;
+    gap: 169.48px;
+    
+    div {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        grid-column: 1;
+    }
+
+    h2 {
+        font-family: RubikMed;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 50px;
+        color: #0B132A;
+    }
+
+    h3 {
+        font-family: RubikReg;
+        font-family: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #4F5665;
+    }
+
+    p {
+        display: flex;
+        font-family: RubikReg;
+        font-size: 14px;
+        line-height: 30px;
+        margin: 15px 0;
+        &::before {
+            content: url(./assets/images/check-mark.svg);
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
     }
 }
