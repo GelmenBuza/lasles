@@ -435,3 +435,131 @@ body {
         margin-bottom: 30px;
     }
 }
+
+.fifth-section {
+    margin-top: 60px;
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        font-family: RubikMed;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 50px;
+        color: #0B132A;
+        text-align: center;
+    }
+    h3 {
+        font-family: RubikReg;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #4F5665;
+        text-align: center;
+    }
+
+    .reviews {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    .review {
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        width: 400px;
+        height: 230px;
+    }
+    .hover {
+        border: 2px solid #F53838;
+        @include box-shadow(0, 80px, 250px, -130px, #0D1025)
+    }
+    .review-header {
+        margin: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+            }
+            p {
+                font-family: RubikMed;
+                font-size: 18px;
+                font-weight: 500;
+                color: #0B132A;
+                margin: 0;
+                span {
+                    font-family: RubikReg;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #4F5665;
+                }   
+            }
+        }
+        .raiting {
+            display: flex;
+            font-family: RubikReg;
+            font-size: 16px;
+            color: #0B132A;
+            &::after {
+                content: url(/assets/images/star.svg);
+                width: 16px;
+                height: 16px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .review-text {
+        display: block;
+        margin: 30px;
+        margin-top: 0;
+        width: 340px;
+        height: 100px;
+        font-family: RubikReg;
+        font-size: 16px;
+        line-height: 30px;
+        color: #0B132A;
+    }
+}
+
+main {
+    position: absolute;
+}
+
+.subscribe {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    width: 1140px;
+    height: 233px;
+    @include box-shadow(0, 88px, 250px, -112px, #0d102549);
+    border-radius: 10px;
+    div {
+        margin: 58.5px 70px;
+        p {
+            font-family: RubikMed;
+            font-size: 35px;
+            line-height: 45px;
+            font-weight: 500;
+            color: #0B132A;
+        }
+        span {
+            font-family: RubikReg;
+            font-size: 16px;
+            color: #4F5665;
+        }
+    }
+    
+}

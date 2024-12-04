@@ -401,4 +401,128 @@ body {
 }
 .fouth-section .map {
   margin-bottom: 30px;
+}
+
+.fifth-section {
+  margin-top: 60px;
+  margin: 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fifth-section h2 {
+  font-family: RubikMed;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0B132A;
+  text-align: center;
+}
+.fifth-section h3 {
+  font-family: RubikReg;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #4F5665;
+  text-align: center;
+}
+.fifth-section .reviews {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.fifth-section .review {
+  border: 2px solid #DDDDDD;
+  border-radius: 10px;
+  width: 400px;
+  height: 230px;
+}
+.fifth-section .hover {
+  border: 2px solid #F53838;
+  box-shadow: 0 80px 250px -130px #0D1025;
+}
+.fifth-section .review-header {
+  margin: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+.fifth-section .review-header div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.fifth-section .review-header div img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.fifth-section .review-header div p {
+  font-family: RubikMed;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0B132A;
+  margin: 0;
+}
+.fifth-section .review-header div p span {
+  font-family: RubikReg;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4F5665;
+}
+.fifth-section .review-header .raiting {
+  display: flex;
+  font-family: RubikReg;
+  font-size: 16px;
+  color: #0B132A;
+}
+.fifth-section .review-header .raiting::after {
+  content: url(/assets/images/star.svg);
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+.fifth-section .review-text {
+  display: block;
+  margin: 30px;
+  margin-top: 0;
+  width: 340px;
+  height: 100px;
+  font-family: RubikReg;
+  font-size: 16px;
+  line-height: 30px;
+  color: #0B132A;
+}
+
+main {
+  position: absolute;
+}
+
+.subscribe {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  display: flex;
+  width: 1140px;
+  height: 233px;
+  box-shadow: 0 88px 250px -112px rgba(13, 16, 37, 0.2862745098);
+  border-radius: 10px;
+}
+.subscribe div {
+  margin: 58.5px 70px;
+}
+.subscribe div p {
+  font-family: RubikMed;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #0B132A;
+}
+.subscribe div span {
+  font-family: RubikReg;
+  font-size: 16px;
+  color: #4F5665;
 }/*# sourceMappingURL=style.css.map */
