@@ -532,14 +532,20 @@ body {
         color: #0B132A;
     }
 }
+main {
+    position: relative;
+    background: linear-gradient(180deg, #f8f8f800 0%,#F8F8F8 100%);
+}
 
 .subscribe {
     position: absolute;
-    left: 50%;
-    right: 50%;
     display: flex;
+    justify-content: space-between;
     width: 1140px;
-    height: 233px;
+    height: 233px; 
+    left: 50%;
+    transform: translate(-50%, 25%);
+    background-color: #FFFFFF;
     @include box-shadow(0, 88px, 250px, -112px, #0d102549);
     border-radius: 10px;
     div {
@@ -550,13 +556,28 @@ body {
             line-height: 45px;
             font-weight: 500;
             color: #0B132A;
+            margin: 0;
+            margin-bottom: 20px;
         }
         span {
             font-family: RubikReg;
             font-size: 16px;
             color: #4F5665;
         }
-    }   
+    }
+    button {
+        width: 250px;
+        height: 80px;
+        background-color: #F53838;
+        border-radius: 10px;
+        border: none;
+        color: #FFFFFF;
+        font-family: RubikBold;
+        font-size: 16px;
+        margin: 86.5px 70px;
+        cursor: pointer;
+        @include box-shadow(0, 44px, 40px, -5px, #f5383859);
+    }
 }
 
 footer {
