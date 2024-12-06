@@ -29,6 +29,23 @@
     color: $fontColor;
 }
 
+@mixin doFlex($isRow, $isColum, $Just: none, $aling: none){
+    display: flex;
+    @if ($isRow){
+        flex-direction: row;
+    } 
+    @if ($isColum) {
+        flex-direction: column;
+    }
+    @if ($Just != none) {
+        justify-content: $Just;
+    }
+    @if ($aling != none) {
+        align-items: $aling;
+    }
+
+}
+
 @mixin buttonAnimate {
     animation: 200ms hover forwards;
 
@@ -54,15 +71,11 @@ body {
 }
 
 .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include doFlex(true, false, space-between, center);
     margin: 50px 150px;
 
     span {
-        display: flex;
-        align-items: center;
+        @include doFlex(false, false, none, center);
         @include fonts(RubikMed, 500, 20px, #0B132A);
         text-align: center;
         margin-right: 158px;
@@ -80,10 +93,8 @@ body {
     }
 
     div {
-        display: flex;
-        flex-direction: row;
+        @include doFlex(true, false, none, center);
         @include fonts(RubikMed, 500, 16px, #0B132A);
-        align-items: center;
         margin-left: 150px;
 
         p {
@@ -281,8 +292,7 @@ body {
 
     div {
         grid-column: 2;
-        display: flex;
-        flex-direction: column;
+        @include doFlex(false, true, none, none);
     }
 
     img {
@@ -303,7 +313,7 @@ body {
 
     p {
         @include fonts(RubikReg, 400, 14px, #4F5665);
-        display: flex;
+        @include doFlex(false, false, none, none);
         line-height: 30px;
         margin: 7.5px 0;
         &::before {
@@ -318,9 +328,7 @@ body {
 }
 
 .third-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include doFlex(false, true, none, center);
 
     .head-third-section {
         @include fonts(RubikMed, 500, 35px, #0B132A);
@@ -337,16 +345,11 @@ body {
     }
 
     .cards {
-        display: flex;
-        flex-direction: row;
-
+        @include doFlex(true, false, none, none);
         .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            @include doFlex(false, true, space-between, center);
             width: 330px;
             height: 760px;
-            align-items: center;
             margin: 0 25px;
             border: 2px solid #DDDDDD;
             border-radius: 10px;
@@ -364,7 +367,7 @@ body {
             }
 
             p {
-                display: flex;
+                @include doFlex(false, false, none, none);
                 @include fonts(RubikReg, 400, 14px, #4F5665);
                 line-height: 30px;
                 margin: 10px 0;
@@ -413,9 +416,7 @@ body {
 
 .fouth-section {
     margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include doFlex(false, true, none, center);
 
     h2 {
         @include fonts(RubikMed, 500, 35px, #0B132A);
@@ -445,9 +446,7 @@ body {
 .fifth-section {
     margin-top: 60px;
     margin: 0 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include doFlex(false, true, none, center);
 
     h2 {
         @include fonts(RubikMed, 500, 35px, #0B132A);
@@ -463,8 +462,7 @@ body {
 
     .reviews {
         margin-top: 60px;
-        display: flex;
-        flex-direction: row;
+        @include doFlex(true, false, none, none);
         gap: 50px;
     }
 
@@ -483,14 +481,11 @@ body {
     .review-header {
         margin: 30px;
         margin-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include doFlex(true, false, space-between, none);
         height: 50px;
 
         div {
-            display: flex;
-            flex-direction: row;
+            @include doFlex(true, false, none, center);
             flex-wrap: wrap;
 
             img {
@@ -510,7 +505,7 @@ body {
         }
 
         .raiting {
-            display: flex;
+            @include doFlex(false, false, none, none);
             @include fonts(RubikReg, 400, 16px, #0B132A);
 
             &::after {
@@ -543,8 +538,7 @@ main {
 
 .subscribe {
     position: absolute;
-    display: flex;
-    justify-content: space-between;
+    @include doFlex(false, false, space-between, none);
     width: 1140px;
     height: 233px;
     left: 50%;
@@ -597,9 +591,7 @@ footer {
 
     .logoText {
         @include fonts(RubikMed, 500, 20px, #0B132A);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include doFlex(true, false, none, center);
         margin-bottom: 20px;
 
         img {
@@ -610,7 +602,7 @@ footer {
     }
 
     .logs {
-        display: flex;
+        @include doFlex(false, false, none, none);
         gap: 20px;
         margin-bottom: 30px;
 
@@ -643,13 +635,11 @@ footer {
 
 .right-side {
     grid-column: 2;
-    display: flex;
-    flex-direction: row;
+    @include doFlex(true, false, none, none);
     gap: 126px;
 
     div {
-        display: flex;
-        flex-direction: column;
+        @include doFlex(false, true, none, none);
         gap: 20px;
         margin-top: 180px;
         margin-bottom: 100px;
