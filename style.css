@@ -292,23 +292,21 @@ body {
   line-height: 50px;
   margin: 0;
   margin-bottom: 20px;
-  margin-top: 54px;
 }
 .second-section h3 {
   font-family: RubikReg, sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #4F5665;
-  line-height: 30px;
   margin: 0;
   margin-bottom: 20px;
 }
 .second-section p {
-  display: flex;
   font-family: RubikReg, sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #4F5665;
+  display: flex;
   line-height: 30px;
   margin: 7.5px 0;
 }
@@ -565,6 +563,9 @@ body {
 
 main {
   position: relative;
+}
+
+.linar {
   background: linear-gradient(0deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%);
 }
 

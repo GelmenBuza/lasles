@@ -9,6 +9,7 @@
     src: url(./assets/fonts/Rubik-Regular.ttf);
     font-weight: 400;
 }
+
 @font-face {
     font-family: RubikMed;
     src: url(./assets/fonts/Rubik-Medium.ttf);
@@ -20,6 +21,7 @@
     -webkit-box-shadow: $x $y $blur $spread $color;
     box-shadow: $x $y $blur $spread $color;
 }
+
 @mixin fonts($fontName, $fontWeght, $fontSize, $fontColor) {
     font-family: $fontName, sans-serif, Arial, Helvetica, sans-serif;
     font-weight: $fontWeght;
@@ -28,8 +30,8 @@
 }
 
 @mixin buttonAnimate {
-    @content;
     animation: 200ms hover forwards;
+
     @keyframes hover {
         from {
             border: 1px solid #F53855;
@@ -57,18 +59,21 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 50px 150px;
+
     span {
         display: flex;
         align-items: center;
         @include fonts(RubikMed, 500, 20px, #0B132A);
         text-align: center;
         margin-right: 158px;
+
         .logo {
             width: 35px;
             height: 36.23px;
             margin-right: 10px;
         }
     }
+
     a {
         text-decoration: none;
         @include fonts(RubikReg, 400, 16px, #4F5665);
@@ -80,9 +85,11 @@ body {
         @include fonts(RubikMed, 500, 16px, #0B132A);
         align-items: center;
         margin-left: 150px;
+
         p {
             padding: 0 15px;
         }
+
         .active {
             border-radius: 50px;
             border: 1px solid #F53855;
@@ -116,7 +123,7 @@ body {
         width: 611.24px;
         height: 382.44px;
     }
-    
+
     h1 {
         @include fonts(RubikMed, 500, 50px, #0B132A);
         grid-row: 1/2;
@@ -133,6 +140,7 @@ body {
         grid-row: 3;
         grid-column: 1;
         line-height: 30px;
+
         span {
             font-family: RubikBold, sans-serif;
             font-weight: 700;
@@ -148,6 +156,7 @@ body {
         grid-row: 4;
         border-radius: 10px;
         @include fonts(RubikBold, 700, 16px, #F53855);
+
         &:hover {
             @include buttonAnimate();
         }
@@ -174,10 +183,12 @@ body {
         grid-template-rows: repeat(2, 32.5px);
         justify-content: center;
         align-items: center;
+
         img {
             grid-column: 1;
             grid-row: 1/3;
         }
+
         h2 {
             grid-column: 3;
             grid-row: 1/2;
@@ -186,6 +197,7 @@ body {
             @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
         }
+
         span {
             grid-column: 3;
             grid-row: 2/3;
@@ -203,10 +215,12 @@ body {
         grid-template-rows: repeat(2, 32.5px);
         justify-content: center;
         align-items: center;
+
         img {
             grid-column: 1;
             grid-row: 1/3;
         }
+
         h2 {
             grid-column: 3;
             grid-row: 1/2;
@@ -215,6 +229,7 @@ body {
             @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
         }
+
         span {
             grid-column: 3;
             grid-row: 2/3;
@@ -225,16 +240,18 @@ body {
 
     }
 
-    .server{
+    .server {
         display: grid;
         grid-template-columns: 55px 36.5px auto;
         grid-template-rows: repeat(2, 32.5px);
         justify-content: center;
         align-items: center;
+
         img {
             grid-column: 1;
             grid-row: 1/3;
         }
+
         h2 {
             grid-column: 3;
             grid-row: 1/2;
@@ -243,6 +260,7 @@ body {
             @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
         }
+
         span {
             grid-column: 3;
             grid-row: 2/3;
@@ -260,7 +278,7 @@ body {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 100%;
     gap: 169.48px;
-    
+
     div {
         grid-column: 2;
         display: flex;
@@ -276,19 +294,16 @@ body {
         line-height: 50px;
         margin: 0;
         margin-bottom: 20px;
-        margin-top: 54px;
     }
-
     h3 {
         @include fonts(RubikReg, 400, 16px, #4F5665);
-        line-height: 30px;
         margin: 0;
         margin-bottom: 20px;
     }
 
     p {
-        display: flex;
         @include fonts(RubikReg, 400, 14px, #4F5665);
+        display: flex;
         line-height: 30px;
         margin: 7.5px 0;
         &::before {
@@ -298,6 +313,7 @@ body {
             margin-right: 10px;
         }
     }
+
     margin-bottom: 119.23px;
 }
 
@@ -305,6 +321,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .head-third-section {
         @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
@@ -318,6 +335,7 @@ body {
         margin: 0;
         margin-bottom: 60px;
     }
+
     .cards {
         display: flex;
         flex-direction: row;
@@ -332,17 +350,19 @@ body {
             margin: 0 25px;
             border: 2px solid #DDDDDD;
             border-radius: 10px;
-            
+
             img {
                 margin-top: 80px;
                 margin-bottom: 30px;
             }
+
             h4 {
                 @include fonts(RubikMed, 500, 18px, #0B132A);
                 line-height: 30px;
                 margin: 0;
                 margin-bottom: 20px;
             }
+
             p {
                 display: flex;
                 @include fonts(RubikReg, 400, 14px, #4F5665);
@@ -368,6 +388,7 @@ body {
                         @include fonts(RubikReg, 400, 25px, #4F5665);
                     }
                 }
+
                 button {
                     border: 2px solid #F53838;
                     background-color: transparent;
@@ -378,10 +399,12 @@ body {
                     margin-bottom: 50px;
                 }
             }
+
             &:hover {
                 button:hover {
                     @include buttonAnimate();
                 }
+
                 border: 2px solid #F53838;
             }
         }
@@ -393,6 +416,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h2 {
         @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
@@ -400,17 +424,19 @@ body {
         margin-bottom: 20px;
         text-align: center;
     }
+
     h3 {
         @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
         margin: 0;
         margin-bottom: 155px;
         text-align: center;
+
         span {
             @include fonts(RubikMed, 500, 16px, #4F5665);
         }
     }
-    
+
     .map {
         margin-bottom: 30px;
     }
@@ -422,11 +448,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h2 {
         @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
         text-align: center;
     }
+
     h3 {
         @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
@@ -439,16 +467,19 @@ body {
         flex-direction: row;
         gap: 50px;
     }
+
     .review {
         border: 2px solid #DDDDDD;
         border-radius: 10px;
         width: 400px;
         height: 230px;
+
         &:hover {
             border: 2px solid #F53838;
             @include box-shadow(0, 80px, 250px, -130px, #0D1025)
         }
     }
+
     .review-header {
         margin: 30px;
         margin-bottom: 20px;
@@ -461,22 +492,27 @@ body {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+
             img {
                 width: 50px;
                 height: 50px;
                 margin-right: 20px;
             }
+
             p {
                 @include fonts(RubikMed, 500, 18px, #0B132A);
                 margin: 0;
+
                 span {
                     @include fonts(RubikReg, 400, 14px, #4F5665);
-                }   
+                }
             }
         }
+
         .raiting {
             display: flex;
             @include fonts(RubikReg, 400, 16px, #0B132A);
+
             &::after {
                 content: url(/assets/images/star.svg);
                 width: 16px;
@@ -496,9 +532,13 @@ body {
         line-height: 30px;
     }
 }
+
 main {
     position: relative;
-    background: linear-gradient(0deg, #f8f8f800 0%,#F8F8F8 100%);
+}
+
+.linar {
+    background: linear-gradient(0deg, #f8f8f800 0%, #F8F8F8 100%);
 }
 
 .subscribe {
@@ -506,24 +546,28 @@ main {
     display: flex;
     justify-content: space-between;
     width: 1140px;
-    height: 233px; 
+    height: 233px;
     left: 50%;
     transform: translate(-50%, 25%);
     background-color: #FFFFFF;
     @include box-shadow(0, 88px, 250px, -112px, #0d102549);
     border-radius: 10px;
+
     div {
         margin: 58.5px 70px;
+
         p {
             @include fonts(RubikMed, 500, 35px, #0B132A);
             line-height: 45px;
             margin: 0;
             margin-bottom: 20px;
         }
+
         span {
             @include fonts(RubikReg, 400, 16px, #4F5665);
         }
     }
+
     button {
         width: 250px;
         height: 80px;
@@ -532,6 +576,7 @@ main {
         border: 1px solid #F53855;
         background-color: transparent;
         @include fonts(RubikBold, 700, 16px, #F53855);
+
         &:hover {
             @include buttonAnimate();
         }
@@ -549,22 +594,26 @@ footer {
     grid-column: 1;
     margin-top: 180px;
     margin-left: 150px;
+
     .logoText {
         @include fonts(RubikMed, 500, 20px, #0B132A);
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: 20px;
+
         img {
             width: 35px;
             height: 36.23px;
             margin-right: 10px;
         }
     }
+
     .logs {
         display: flex;
         gap: 20px;
         margin-bottom: 30px;
+
         img {
             background-color: #F53838;
             border-radius: 50px;
@@ -573,16 +622,19 @@ footer {
             @include box-shadow(0, 13px, 18px, 0, #11132310)
         }
     }
+
     .under-logo-text {
         display: block;
         width: 340px;
         @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
         margin-bottom: 30px;
+
         span {
             @include fonts(RubikMed, 500, 16px, #4F5665);
         }
     }
+
     .copy {
         @include fonts(RubikReg, 400, 16px, #AFB5C0);
         line-height: 30px;
@@ -590,21 +642,24 @@ footer {
 }
 
 .right-side {
-    grid-column: 2; 
+    grid-column: 2;
     display: flex;
     flex-direction: row;
     gap: 126px;
+
     div {
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin-top: 180px;
         margin-bottom: 100px;
+
         h3 {
             @include fonts(RubikMed, 500, 18px, #0B132A);
             line-height: 30px;
             margin: 0;
         }
+
         a {
             @include fonts(RubikReg, 400, 16px, #4F5665);
             text-decoration: none;
