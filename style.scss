@@ -29,18 +29,22 @@
     color: $fontColor;
 }
 
-@mixin doFlex($isRow, $isColum, $Just: none, $aling: none){
+@mixin doFlex($isRow, $isColum, $Just: none, $aling: none) {
     display: flex;
-    @if ($isRow){
+
+    @if ($isRow) {
         flex-direction: row;
-    } 
+    }
+
     @if ($isColum) {
         flex-direction: column;
     }
-    @if ($Just != none) {
+
+    @if ($Just !=none) {
         justify-content: $Just;
     }
-    @if ($aling != none) {
+
+    @if ($aling !=none) {
         align-items: $aling;
     }
 
@@ -305,6 +309,7 @@ body {
         margin: 0;
         margin-bottom: 20px;
     }
+
     h3 {
         @include fonts(RubikReg, 400, 16px, #4F5665);
         margin: 0;
@@ -316,6 +321,7 @@ body {
         @include doFlex(false, false, none, none);
         line-height: 30px;
         margin: 7.5px 0;
+
         &::before {
             content: url(./assets/images/check-mark.svg);
             width: 24px;
@@ -346,6 +352,7 @@ body {
 
     .cards {
         @include doFlex(true, false, none, none);
+
         .card {
             @include doFlex(false, true, space-between, center);
             width: 330px;
