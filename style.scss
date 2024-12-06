@@ -20,6 +20,31 @@
     -webkit-box-shadow: $x $y $blur $spread $color;
     box-shadow: $x $y $blur $spread $color;
 }
+@mixin fonts($fontName, $fontWeght, $fontSize, $fontColor) {
+    font-family: $fontName, sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: $fontWeght;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+@mixin buttonAnimate {
+    @content;
+    animation: 200ms hover forwards;
+    @keyframes hover {
+        from {
+            border: 1px solid #F53855;
+            color: #F53855;
+            background-color: transparent;
+        }
+
+        to {
+            @include box-shadow(0, 24px, 30px, -10px, #F53838);
+            background-color: #F53838;
+            color: #FFFFFF;
+        }
+
+    }
+}
 
 body {
     width: 1440px;
@@ -35,9 +60,7 @@ body {
     span {
         display: flex;
         align-items: center;
-        font-family: RubikMed, sans-serif;
-        font-size: 20px;
-        color: #0B132A;
+        @include fonts(RubikMed, 500, 20px, #0B132A);
         text-align: center;
         margin-right: 158px;
         .logo {
@@ -48,17 +71,13 @@ body {
     }
     a {
         text-decoration: none;
-        color: #4F5665;
-        font-family: RubikReg, sans-serif;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
     }
 
     div {
         display: flex;
         flex-direction: row;
-        font-family: RubikMed, sans-serif;
-        font-size: 16px;
-        color: #0B132A;
+        @include fonts(RubikMed, 500, 16px, #0B132A);
         align-items: center;
         margin-left: 150px;
         p {
@@ -68,11 +87,17 @@ body {
             border-radius: 50px;
             border: 1px solid #F53855;
             color: #F53855;
+            background-color: transparent;
             width: 120px;
             height: 45px;
             display: inline-flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                @include buttonAnimate();
+
+            }
         }
     }
 }
@@ -93,10 +118,7 @@ body {
     }
     
     h1 {
-        font-family: RubikMed, sans-serif;
-        font-weight: 400;
-        font-size: 50px;
-        color: #0B132A;
+        @include fonts(RubikMed, 500, 50px, #0B132A);
         grid-row: 1/2;
         grid-column: 1;
         line-height: 70px;
@@ -107,29 +129,28 @@ body {
     }
 
     p {
-        font-family: RubikMed, sans-serif;
-        font-size: 16px;
-        color: #4F5665;
+        @include fonts(RubikMed, 500, 16px, #4F5665);
         grid-row: 3;
         grid-column: 1;
         line-height: 30px;
         span {
             font-family: RubikBold, sans-serif;
+            font-weight: 700;
         }
     }
 
     button {
         width: 250px;
         height: 60px;
-        background-color: #F53838;
         grid-column: 1;
+        border: 1px solid #F53855;
+        background-color: transparent;
         grid-row: 4;
         border-radius: 10px;
-        border: none;
-        color: #FFFFFF;
-        font-family: RubikBold;
-        cursor: pointer;
-        @include box-shadow(0, 44px, 40px, -5px, #f5383859);
+        @include fonts(RubikBold, 700, 16px, #F53855);
+        &:hover {
+            @include buttonAnimate();
+        }
     }
 }
 
@@ -162,19 +183,15 @@ body {
             grid-row: 1/2;
             line-height: 0;
             text-align: center;
-            font-family: RubikBold;
-            font-size: 25px;
+            @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
-            color: #0B132A;
         }
         span {
             grid-column: 3;
             grid-row: 2/3;
             text-align: center;
-            font-family: RubikReg;
-            font-size: 20px;
+            @include fonts(RubikReg, 400, 20px, #4F5665);
             line-height: 30px;
-            color: #4F5665;
         }
     }
 
@@ -195,19 +212,15 @@ body {
             grid-row: 1/2;
             line-height: 0;
             text-align: center;
-            font-family: RubikBold;
-            font-size: 25px;
+            @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
-            color: #0B132A;
         }
         span {
             grid-column: 3;
             grid-row: 2/3;
             text-align: center;
-            font-family: RubikReg;
-            font-size: 20px;
+            @include fonts(RubikReg, 400, 20px, #4F5665);
             line-height: 30px;
-            color: #4F5665;
         }
 
     }
@@ -227,19 +240,15 @@ body {
             grid-row: 1/2;
             line-height: 0;
             text-align: center;
-            font-family: RubikBold;
-            font-size: 25px;
+            @include fonts(RubikBold, 700, 25px, #0B132A);
             line-height: 30px;
-            color: #0B132A;
         }
         span {
             grid-column: 3;
             grid-row: 2/3;
             text-align: center;
-            font-family: RubikReg;
-            font-size: 20px;
+            @include fonts(RubikReg, 400, 20px, #4F5665);
             line-height: 30px;
-            color: #4F5665;
         }
     }
 }
@@ -263,27 +272,25 @@ body {
     }
 
     h2 {
-        font-family: RubikMed;
-        font-weight: 500;
-        font-size: 35px;
+        @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
-        color: #0B132A;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-top: 54px;
     }
 
     h3 {
-        font-family: RubikReg;
-        font-family: 400;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
-        color: #4F5665;
+        margin: 0;
+        margin-bottom: 20px;
     }
 
     p {
         display: flex;
-        font-family: RubikReg;
-        font-size: 14px;
+        @include fonts(RubikReg, 400, 14px, #4F5665);
         line-height: 30px;
-        margin: 15px 0;
+        margin: 7.5px 0;
         &::before {
             content: url(./assets/images/check-mark.svg);
             width: 24px;
@@ -291,6 +298,7 @@ body {
             margin-right: 10px;
         }
     }
+    margin-bottom: 119.23px;
 }
 
 .third-section {
@@ -298,23 +306,17 @@ body {
     flex-direction: column;
     align-items: center;
     .head-third-section {
-        font-family: RubikMed;
-        font-weight: 500;
-        font-size: 35px;
+        @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
-        color: #0B132A;
         margin-top: 80px;
         margin-bottom: 20px;
     }
 
     .second-head-third-section {
-        font-family: RubikReg;
-        font-size: 16px;
-        font-weight: 400;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
         margin: 0;
         margin-bottom: 60px;
-        color: #4F5665;
     }
     .cards {
         display: flex;
@@ -336,22 +338,16 @@ body {
                 margin-bottom: 30px;
             }
             h4 {
-                font-family: RubikMed;
-                font-size: 18px;
-                font-weight: 500;
+                @include fonts(RubikMed, 500, 18px, #0B132A);
                 line-height: 30px;
                 margin: 0;
                 margin-bottom: 20px;
-                color: #0B132A;
             }
             p {
                 display: flex;
-                font-family: RubikReg;
-                font-weight: 400;
-                font-size: 14px;
+                @include fonts(RubikReg, 400, 14px, #4F5665);
                 line-height: 30px;
                 margin: 10px 0;
-                color: #4F5665;
 
                 &::before {
                     content: url(/assets/images/jam_check.svg);
@@ -363,39 +359,30 @@ body {
 
             div {
                 h3 {
-                    font-family: RubikMed;
-                    font-size: 25px;
-                    font-weight: 500;
+                    @include fonts(RubikMed, 500, 25px, #0B132A);
                     line-height: 30px;
-                    color: #0B132A;
                     margin: 0;
                     margin-bottom: 20px;
 
                     span {
-                        font-family: RubikReg;
-                        font-weight: 400;
-                        color: #4F5665;
+                        @include fonts(RubikReg, 400, 25px, #4F5665);
                     }
                 }
                 button {
                     border: 2px solid #F53838;
                     background-color: transparent;
-                    color: #F53838;
-                    font-family: RubikBold;
-                    font-size: 16px;
+                    @include fonts(RubikBold, 700, 16px, #F53838);
                     border-radius: 50px;
                     width: 175px;
                     height: 45px;
                     margin-bottom: 50px;
                 }
             }
-        }
-        .active-card {
-            border: 2px solid #F53838;
-            .active-button {
-                @include box-shadow(0, 24px, 30px, -10px, #F53838);
-                background-color: #F53838;
-                color: #FFFFFF;
+            &:hover {
+                button:hover {
+                    @include buttonAnimate();
+                }
+                border: 2px solid #F53838;
             }
         }
     }
@@ -407,27 +394,20 @@ body {
     flex-direction: column;
     align-items: center;
     h2 {
-        font-family: RubikMed;
-        font-size: 35px;
-        font-weight: 500;
+        @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
-        color: #0B132A;
         margin: 0;
         margin-bottom: 20px;
         text-align: center;
     }
     h3 {
-        font-family: RubikReg;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
-        font-weight: 400;
-        color: #4F5665;
         margin: 0;
         margin-bottom: 155px;
         text-align: center;
         span {
-            font-family: RubikMed;
-            font-weight: 500;
+            @include fonts(RubikMed, 500, 16px, #4F5665);
         }
     }
     
@@ -443,19 +423,13 @@ body {
     flex-direction: column;
     align-items: center;
     h2 {
-        font-family: RubikMed;
-        font-weight: 500;
-        font-size: 35px;
+        @include fonts(RubikMed, 500, 35px, #0B132A);
         line-height: 50px;
-        color: #0B132A;
         text-align: center;
     }
     h3 {
-        font-family: RubikReg;
-        font-size: 16px;
-        font-weight: 400;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
-        color: #4F5665;
         text-align: center;
     }
 
@@ -470,10 +444,10 @@ body {
         border-radius: 10px;
         width: 400px;
         height: 230px;
-    }
-    .hover {
-        border: 2px solid #F53838;
-        @include box-shadow(0, 80px, 250px, -130px, #0D1025)
+        &:hover {
+            border: 2px solid #F53838;
+            @include box-shadow(0, 80px, 250px, -130px, #0D1025)
+        }
     }
     .review-header {
         margin: 30px;
@@ -493,24 +467,16 @@ body {
                 margin-right: 20px;
             }
             p {
-                font-family: RubikMed;
-                font-size: 18px;
-                font-weight: 500;
-                color: #0B132A;
+                @include fonts(RubikMed, 500, 18px, #0B132A);
                 margin: 0;
                 span {
-                    font-family: RubikReg;
-                    font-weight: 400;
-                    font-size: 14px;
-                    color: #4F5665;
+                    @include fonts(RubikReg, 400, 14px, #4F5665);
                 }   
             }
         }
         .raiting {
             display: flex;
-            font-family: RubikReg;
-            font-size: 16px;
-            color: #0B132A;
+            @include fonts(RubikReg, 400, 16px, #0B132A);
             &::after {
                 content: url(/assets/images/star.svg);
                 width: 16px;
@@ -526,15 +492,13 @@ body {
         margin-top: 0;
         width: 340px;
         height: 100px;
-        font-family: RubikReg;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #0B132A);
         line-height: 30px;
-        color: #0B132A;
     }
 }
 main {
     position: relative;
-    background: linear-gradient(180deg, #f8f8f800 0%,#F8F8F8 100%);
+    background: linear-gradient(0deg, #f8f8f800 0%,#F8F8F8 100%);
 }
 
 .subscribe {
@@ -551,32 +515,26 @@ main {
     div {
         margin: 58.5px 70px;
         p {
-            font-family: RubikMed;
-            font-size: 35px;
+            @include fonts(RubikMed, 500, 35px, #0B132A);
             line-height: 45px;
-            font-weight: 500;
-            color: #0B132A;
             margin: 0;
             margin-bottom: 20px;
         }
         span {
-            font-family: RubikReg;
-            font-size: 16px;
-            color: #4F5665;
+            @include fonts(RubikReg, 400, 16px, #4F5665);
         }
     }
     button {
         width: 250px;
         height: 80px;
-        background-color: #F53838;
         border-radius: 10px;
-        border: none;
-        color: #FFFFFF;
-        font-family: RubikBold;
-        font-size: 16px;
         margin: 86.5px 70px;
-        cursor: pointer;
-        @include box-shadow(0, 44px, 40px, -5px, #f5383859);
+        border: 1px solid #F53855;
+        background-color: transparent;
+        @include fonts(RubikBold, 700, 16px, #F53855);
+        &:hover {
+            @include buttonAnimate();
+        }
     }
 }
 
@@ -592,8 +550,7 @@ footer {
     margin-top: 180px;
     margin-left: 150px;
     .logoText {
-        font-family: RubikMed;
-        font-size: 20px;
+        @include fonts(RubikMed, 500, 20px, #0B132A);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -619,20 +576,16 @@ footer {
     .under-logo-text {
         display: block;
         width: 340px;
-        font-family: RubikReg;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #4F5665);
         line-height: 30px;
-        color: #4F5665;
         margin-bottom: 30px;
         span {
-            font-family: RubikMed;
+            @include fonts(RubikMed, 500, 16px, #4F5665);
         }
     }
     .copy {
-        font-family: RubikReg;
-        font-size: 16px;
+        @include fonts(RubikReg, 400, 16px, #AFB5C0);
         line-height: 30px;
-        color: #AFB5C0;
     }
 }
 
@@ -648,20 +601,14 @@ footer {
         margin-top: 180px;
         margin-bottom: 100px;
         h3 {
-            font-family: RubikMed;
-            font-size: 18px;
+            @include fonts(RubikMed, 500, 18px, #0B132A);
             line-height: 30px;
-            font-weight: 500;
-            color: #0B132A;
             margin: 0;
         }
         a {
+            @include fonts(RubikReg, 400, 16px, #4F5665);
             text-decoration: none;
-            font-family: RubikReg;
-            font-size: 16px;
             line-height: 30px;
-            font-weight: 400;
-            color: #4F5665;
             margin: 0;
         }
     }
